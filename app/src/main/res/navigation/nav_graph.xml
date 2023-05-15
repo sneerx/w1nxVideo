@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.feed.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feedFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_tvShowFragment"
+            app:destination="@id/tvShowFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_downloadsFragment"
+            app:destination="@id/downloadsFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.feed.movie.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_movieFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.detail.movie.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+        <action
+            android:id="@+id/action_movieDetailFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvShowFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.feed.tvshow.TvShowFragment"
+        android:label="fragment_tv_show"
+        tools:layout="@layout/fragment_tv_show" >
+        <action
+            android:id="@+id/action_tvShowFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_tvShowFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadsFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.downloads.DownloadsFragment"
+        android:label="fragment_downloads"
+        tools:layout="@layout/fragment_downloads" >
+        <action
+            android:id="@+id/action_downloadsFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreFeedFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.search.genre.GenreFeedFragment"
+        android:label="fragment_genre_feed"
+        tools:layout="@layout/fragment_genre_feed" >
+        <action
+            android:id="@+id/action_genreFeedFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_genreFeedFragment_to_genreMovieFragment"
+            app:destination="@id/genreMovieFragment" />
+        <action
+            android:id="@+id/action_genreFeedFragment_to_genreTvShowFragment"
+            app:destination="@id/genreTvShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreMovieFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.search.genre.movie.GenreMovieFragment"
+        android:label="fragment_genre_movie"
+        tools:layout="@layout/fragment_genre_movie" >
+        <action
+            android:id="@+id/action_genreMovieFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreTvShowFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.search.genre.tvshow.GenreTvShowFragment"
+        android:label="fragment_genre_tv_show"
+        tools:layout="@layout/fragment_genre_tv_show" >
+        <action
+            android:id="@+id/action_genreTvShowFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvShowDetailFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.detail.tvshow.TvShowDetailFragment"
+        android:label="fragment_tv_show_detail"
+        tools:layout="@layout/fragment_tv_show_detail" >
+        <action
+            android:id="@+id/action_tvShowDetailFragment_to_tvShowFragment"
+            app:destination="@id/tvShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.membership.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_feedFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.membership.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_feedFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/feedFragment" />
+    </fragment>
+</navigation>
