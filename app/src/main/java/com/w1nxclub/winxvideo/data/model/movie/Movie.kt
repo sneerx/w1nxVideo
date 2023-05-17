@@ -20,4 +20,10 @@ data class Movie(
     val voteAverage: Float?,
     val voteCount: Int?,
     val credits: Credits?
-): Parcelable
+) : Parcelable
+
+@Parcelize
+data class MovieResult(
+    val results: List<Movie>,
+    val error: String? = null
+) : Parcelable

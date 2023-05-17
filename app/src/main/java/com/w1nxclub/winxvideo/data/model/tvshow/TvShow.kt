@@ -22,3 +22,9 @@ data class TvShow(
     val numberOfSeasons: Int?,
     val numberOfEpisodes: Int?,
 ) : Parcelable
+
+@Parcelize
+data class TvShowResult(
+    val results: List<TvShow>,
+    val error: String? = null
+): Parcelable

@@ -2,10 +2,28 @@
     <string name="app_name">Winx Video</string>
 
     <string name="binding_cannot_be_null">Binding cannot be null</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tumu">Tümü</string>
+    <string name="filmler">Filmler</string>
+    <string name="tv_dizileri">Tv Dizileri</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="anasayfa">Anasayfa</string>
     <string name="indirilenler">İndirilenler</string>
     <string name="bul">Bul</string>
+
+    <string name="prime_suggestion_movie"><font color="#1A98FF">Prime</font> - Önerilen Filmler</string>
+    <string name="prime_amazon_original_content"><font color='#1A98FF'>Prime</font> - Amazon Orijinal ve Özel İçerikler</string>
+    <string name="prime_most_watched_tv"><font color="#1A98FF">Prime</font> - Çok İzlenen Diziler</string>
+    <string name="prime_most_watched_movie"><font color="#1A98FF">Prime</font> - Çok İzlenen Filmler</string>
+    <string name="prime_drama_tv"><font color="#1A98FF">Prime</font> - Dram TV İçerikleri</string>
+    <string name="prime_comedy_movie"><font color="#1A98FF">Prime</font> - Komedi Filmleri</string>
+    <string name="prime_suggestion_tv"><font color='#1A98FF'>Prime</font> - Önerilen Diziler</string>
+
+    <string name="prime_ad">Ücretsiz prime deneme sürümüyle izleyin</string>
+    <string name="bunu_nasil_izlerim">Bunu nasıl izlerim?</string>
+    <string name="fragman">Fragman</string>
+    <string name="tur_bilgisi_yok">Tür bilgisi yok</string>
+    <string name="yonetmen_bilgisi_yok">Yönetmen bilgisi yok</string>
+    <string name="basrol_bilgisi_yok">Başrol bilgisi yok</string>
 
 </resources>
