@@ -2,8 +2,8 @@ package com.w1nxclub.winxvideo.data.model.tvshow
 
 import android.os.Parcelable
 import androidx.annotation.DrawableRes
-import androidx.room.Entity
 import androidx.room.ColumnInfo
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.w1nxclub.winxvideo.core.util.MockData
 import com.w1nxclub.winxvideo.data.model.credits.Credits
