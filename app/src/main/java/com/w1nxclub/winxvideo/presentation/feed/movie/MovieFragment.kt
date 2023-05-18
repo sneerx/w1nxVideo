@@ -57,6 +57,9 @@ class MovieFragment : BaseFragment<FragmentMovieBinding>(
             chipAll.setOnClickListener {
                 findNavController().navigate(R.id.action_movieFragment_to_feedFragment)
             }
+            profileButton.setOnClickListener {
+                findNavController().navigate(R.id.action_movieFragment_to_profileFragment)
+            }
         }
     }
 }

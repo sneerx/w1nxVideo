@@ -38,13 +38,17 @@
                     android:id="@+id/castButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:backgroundTint="@color/background"
-                    android:src="@drawable/baseline_cast_24" />
+                    android:src="@drawable/baseline_cast_24"
+                    app:tint="@android:color/darker_gray" />
 
                 <ImageButton
                     android:id="@+id/profileButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
                     android:backgroundTint="@color/background"
                     android:src="@drawable/baseline_person_24" />
 
@@ -91,11 +95,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="9dp"
                 android:layout_marginEnd="104dp"
+                android:text="@string/prime_ad"
                 android:textColor="@color/white"
-                app:layout_constraintStart_toEndOf="@id/ivGlanceIcon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMovieName"
-                android:text="@string/prime_ad" />
+                app:layout_constraintStart_toEndOf="@id/ivGlanceIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvMovieName" />
 
             <Button
                 android:id="@+id/btnHowToWatch"
@@ -151,9 +155,11 @@
                     android:padding="10dp">
 
                     <ImageView
+                        android:id="@+id/ivWatchListIcon"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/baseline_add_24" />
+                        android:src="@drawable/baseline_add_24"
+                        app:tint="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"

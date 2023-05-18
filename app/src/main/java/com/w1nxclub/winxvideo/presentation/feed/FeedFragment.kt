@@ -140,6 +140,10 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>(
             chipMovies.setOnClickListener {
                 findNavController().navigate(R.id.action_feedFragment_to_movieFragment)
             }
+
+            profileButton.setOnClickListener {
+                findNavController().navigate(R.id.action_feedFragment_to_profileFragment)
+            }
         }
     }
 }

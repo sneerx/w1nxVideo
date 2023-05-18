@@ -59,6 +59,9 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>(
             chipMovies.setOnClickListener {
                 findNavController().navigate(R.id.action_tvShowFragment_to_movieFragment)
             }
+            profileButton.setOnClickListener {
+                findNavController().navigate(R.id.action_tvShowFragment_to_profileFragment)
+            }
         }
     }
 }

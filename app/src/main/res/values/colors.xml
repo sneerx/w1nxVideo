@@ -10,4 +10,5 @@
     <color name="detail_button_color">#33373D</color>
     <color name="details_extra_text">#B3B3B3</color>
 
+    <color name="bottom_sheet_background_color">#191E25</color>
 </resources>
