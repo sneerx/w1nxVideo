@@ -100,8 +100,9 @@
                 android:id="@+id/videoSizeTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="10GB"
+                android:text="5GB"
                 android:textSize="15sp" />
+
 
 
         </LinearLayout>

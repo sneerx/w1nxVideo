@@ -7,12 +7,18 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.ProgressBar
+import androidx.lifecycle.lifecycleScope
 import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.presentation.membership.login.LoginFragment
 import com.w1nxclub.winxvideo.presentation.membership.login.LoginFragment_GeneratedInjector
 import com.w1nxclub.winxvideo.presentation.profile.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 @AndroidEntryPoint
 class SplashScreen : AppCompatActivity() {
@@ -26,24 +32,20 @@ class SplashScreen : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         progressBar.visibility = View.VISIBLE
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+
             progressBar.visibility = View.GONE
 
-            // Hedef fragmenta geçiş yapma işlemi
             val fragment = LoginFragment()
             supportFragmentManager.beginTransaction()
                 .replace(android.R.id.content, fragment)
                 .commit()
-            finish()
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this@SplashScreen, MainActivity::class.java)
             startActivity(intent)
 
-             // SplashScreen'u kapat
-
-
-        }, 3000) // 3 saniye bekleniyor
-
-
+            finish()
+        }
     }
 }

@@ -8,8 +8,10 @@ import androidx.navigation.findNavController
 import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
 import com.w1nxclub.winxvideo.databinding.FragmentDownloadsBinding
+// -- 
 import dagger.hilt.android.AndroidEntryPoint
 
+//entrypoint
 @AndroidEntryPoint
 class DownloadsFragment : BaseFragment<FragmentDownloadsBinding>(
     FragmentDownloadsBinding::inflate
