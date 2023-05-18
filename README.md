@@ -6,8 +6,6 @@ Conflict problemi çıktığı için tek bir commit ile çözümü yaptık. Bran
 - Code base
 - Splash Screen
 - Downloads Screen
-- Modal class
-- UI üzerinde gösterilmek üzere dummy datalar
 
 ### Şeyda Aydın
 - Kategorizasyon
@@ -16,6 +14,5 @@ Conflict problemi çıktığı için tek bir commit ile çözümü yaptık. Bran
 
 ### Enes Arısoy
 - Ana ekran
-- Film, Dizi Ekranı
-- Detay Ekranları
+- Film, Dizi, Detay Ekranı
 - Profil Ekranı
