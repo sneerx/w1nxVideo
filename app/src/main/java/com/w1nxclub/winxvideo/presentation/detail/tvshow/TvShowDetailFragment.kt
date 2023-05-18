@@ -13,6 +13,7 @@ import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
 import com.w1nxclub.winxvideo.core.util.MockConstants.TVSHOW_TYPE
 import com.w1nxclub.winxvideo.core.util.downloadImage
+import com.w1nxclub.winxvideo.core.util.showToast
 import com.w1nxclub.winxvideo.data.model.Media
 import com.w1nxclub.winxvideo.databinding.FragmentTvShowDetailBinding
 import com.w1nxclub.winxvideo.presentation.detail.MediaViewModel
@@ -46,6 +47,9 @@ class TvShowDetailFragment : BaseFragment<FragmentTvShowDetailBinding>(
         binding.apply {
             profileButton.setOnClickListener {
                 findNavController().navigate(R.id.action_tvShowDetailFragment_to_profileFragment)
+            }
+            linearShare.setOnClickListener {
+                requireContext().showToast("Backendden sonra")
             }
         }
     }

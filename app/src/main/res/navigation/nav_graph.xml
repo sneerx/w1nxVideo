@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_movieDetailFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
     </fragment>
     <fragment
         android:id="@+id/tvShowFragment"
@@ -99,6 +102,9 @@
         <action
             android:id="@+id/action_downloadsFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_downloadsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -117,6 +123,15 @@
         <action
             android:id="@+id/action_profileFragment_to_tvShowDetailFragment"
             app:destination="@id/tvShowDetailFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_genreMovieFragment"
+            app:destination="@id/genreMovieFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -129,6 +144,9 @@
         <action
             android:id="@+id/action_searchFragment_to_genreFeedFragment"
             app:destination="@id/genreFeedFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/genreFeedFragment"
@@ -144,6 +162,19 @@
         <action
             android:id="@+id/action_genreFeedFragment_to_genreTvShowFragment"
             app:destination="@id/genreTvShowFragment" />
+        <action
+            android:id="@+id/action_genreFeedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_genreFeedFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
+        <action
+            android:id="@+id/action_genreFeedFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/genreMovieFragment"
@@ -153,6 +184,16 @@
         <action
             android:id="@+id/action_genreMovieFragment_to_genreFeedFragment"
             app:destination="@id/genreFeedFragment" />
+        <action
+            android:id="@+id/action_genreMovieFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_genreMovieFragment_to_genreTvShowFragment"
+            app:destination="@id/genreTvShowFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/genreTvShowFragment"
@@ -162,6 +203,16 @@
         <action
             android:id="@+id/action_genreTvShowFragment_to_genreFeedFragment"
             app:destination="@id/genreFeedFragment" />
+        <action
+            android:id="@+id/action_genreTvShowFragment_to_genreMovieFragment"
+            app:destination="@id/genreMovieFragment" />
+        <action
+            android:id="@+id/action_genreTvShowFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/tvShowDetailFragment"
@@ -181,6 +232,9 @@
         <action
             android:id="@+id/action_tvShowDetailFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_tvShowDetailFragment_to_genreFeedFragment"
+            app:destination="@id/genreFeedFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

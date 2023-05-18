@@ -38,26 +38,32 @@
             app:layout_constraintTop_toBottomOf="@id/tvMediaName"
             tools:text="5 Sezon" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearFragman"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/baseline_play_arrow_24"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDurationOrSeason" />
+            app:layout_constraintTop_toBottomOf="@id/tvDurationOrSeason">
 
-        <TextView
-            android:id="@+id/tvFragman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="20dp"
-            android:text="Fragmanı oynat"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/tvDurationOrSeason" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/baseline_play_arrow_24" />
+
+            <TextView
+                android:id="@+id/tvFragman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:text="Fragmanı oynat"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/linearWatchlist"
@@ -65,14 +71,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            app:layout_constraintTop_toBottomOf="@+id/linearFragman">
 
             <ImageView
                 android:id="@+id/ivWatchListIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:src="@drawable/baseline_check_24"/>
+                android:src="@drawable/baseline_check_24" />
 
             <TextView
                 android:id="@+id/tvWatchlist"
@@ -85,27 +91,34 @@
                 android:textSize="17sp" />
         </LinearLayout>
 
-
-        <ImageView
-            android:id="@+id/ivShare"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/baseline_share_24"
+            android:id="@+id/linearShare"
+            app:layout_constraintTop_toBottomOf="@id/linearWatchlist"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearWatchlist" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tvShare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="24dp"
-            android:text="Paylaş"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            app:layout_constraintStart_toEndOf="@+id/ivShare"
-            app:layout_constraintTop_toBottomOf="@+id/linearWatchlist" />
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/baseline_share_24" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="24dp"
+                android:text="Paylaş"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

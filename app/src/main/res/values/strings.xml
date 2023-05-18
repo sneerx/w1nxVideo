@@ -26,4 +26,8 @@
     <string name="yonetmen_bilgisi_yok">Yönetmen bilgisi yok</string>
     <string name="basrol_bilgisi_yok">Başrol bilgisi yok</string>
 
+    <string name="prime_genre_movie"><font color="#1A98FF">Prime</font> - Filmler</string>
+    <string name="prime_genre_tvShows"><font color="#1A98FF">Prime</font> - Tv dizileri</string>
+    <string name="prime_genre_pop_movie"><font color="#1A98FF">Prime</font> - Popüler filmler</string>
+    <string name="prime_genre_pop_tvShows"><font color="#1A98FF">Prime</font> - Popüler TV</string>
 </resources>

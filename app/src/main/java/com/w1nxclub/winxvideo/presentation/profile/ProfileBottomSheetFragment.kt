@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.w1nxclub.winxvideo.R
+import com.w1nxclub.winxvideo.core.util.showToast
 import com.w1nxclub.winxvideo.databinding.FragmentProfileBottomSheetBinding
 import com.w1nxclub.winxvideo.presentation.detail.MediaViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,6 +35,18 @@ class ProfileBottomSheetFragment : BottomSheetDialogFragment() {
 
         getData()
         deleteFromWatchlist()
+        initClick()
+    }
+
+    private fun initClick() {
+        binding.apply {
+            linearFragman.setOnClickListener {
+                requireContext().showToast("Not yet implemented")
+            }
+            linearShare.setOnClickListener {
+                requireContext().showToast("Backendden sonra")
+            }
+        }
     }
 
     private fun getData() {

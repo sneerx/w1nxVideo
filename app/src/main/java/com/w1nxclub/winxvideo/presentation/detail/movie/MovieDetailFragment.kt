@@ -14,6 +14,7 @@ import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
 import com.w1nxclub.winxvideo.core.util.MockConstants.MOVIE_TYPE
 import com.w1nxclub.winxvideo.core.util.downloadImage
+import com.w1nxclub.winxvideo.core.util.showToast
 import com.w1nxclub.winxvideo.data.model.Media
 import com.w1nxclub.winxvideo.databinding.FragmentMovieDetailBinding
 import com.w1nxclub.winxvideo.presentation.detail.MediaViewModel
@@ -49,6 +50,12 @@ class MovieDetailFragment : BaseFragment<FragmentMovieDetailBinding>(
         binding.apply {
             profileButton.setOnClickListener {
                 findNavController().navigate(R.id.action_movieDetailFragment_to_profileFragment)
+            }
+            linearFragment.setOnClickListener {
+                requireContext().showToast("Not yet implemented")
+            }
+            linearShare.setOnClickListener {
+                requireContext().showToast("Backendden sonra")
             }
         }
     }

@@ -30,7 +30,12 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(
         setupRecyclerView()
 
         getSavedMedia()
+        initClick()
 
+
+    }
+
+    private fun initClick() {
         watchListAdapter.setOnItemClickListener { media ->
             if (media.type == "movie") {
                 val movieType = Movie(
