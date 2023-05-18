@@ -5,6 +5,7 @@ import androidx.annotation.DrawableRes
 import androidx.room.Entity
 import androidx.room.ColumnInfo
 import androidx.room.PrimaryKey
+import com.w1nxclub.winxvideo.core.util.MockData
 import com.w1nxclub.winxvideo.data.model.credits.Credits
 import com.w1nxclub.winxvideo.data.model.genre.Genre
 import kotlinx.parcelize.Parcelize
@@ -25,4 +26,16 @@ data class Movie(
     val voteAverage: Float?,
     val voteCount: Int?,
     val credits: Credits?
-): Parcelable
+) : Parcelable
+
+@Parcelize
+data class MovieResult(
+    val results: List<Movie>,
+    val error: String? = null
+) : Parcelable
+
+object MockMovie {
+    val mockMovieResult = MovieResult(
+        MockData.movies
+    )
+}

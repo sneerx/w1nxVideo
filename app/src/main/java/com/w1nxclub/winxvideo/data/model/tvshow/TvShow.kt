@@ -4,6 +4,7 @@ import android.os.Parcelable
 import androidx.annotation.DrawableRes
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.w1nxclub.winxvideo.core.util.MockData
 import com.w1nxclub.winxvideo.data.model.credits.Credits
 import com.w1nxclub.winxvideo.data.model.genre.Genre
 import kotlinx.parcelize.Parcelize
@@ -12,7 +13,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class TvShow(
     @PrimaryKey(autoGenerate = true)
-    val id: Int?,
+    val id: Int,
     val title: String?,
     val overview: String?,
     @DrawableRes val posterPath: Int?,
@@ -26,3 +27,15 @@ data class TvShow(
     val numberOfSeasons: Int?,
     val numberOfEpisodes: Int?,
 ) : Parcelable
+
+@Parcelize
+data class TvShowResult(
+    val results: List<TvShow>,
+    val error: String? = null
+): Parcelable
+
+object MockTvShow {
+    val mockTvShowResult = TvShowResult(
+        MockData.tvshow
+    )
+}
