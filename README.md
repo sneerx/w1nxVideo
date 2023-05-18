@@ -16,3 +16,6 @@ Conflict problemi çıktığı için tek bir commit ile çözümü yaptık. Bran
 - Ana ekran
 - Film, Dizi, Detay Ekranı
 - Profil Ekranı
+
+Apk dosyası buradan indirilebilir:
+https://github.com/SDU-Bilgisayar-Muhendisligi/w1nxVideo/releases/tag/release
