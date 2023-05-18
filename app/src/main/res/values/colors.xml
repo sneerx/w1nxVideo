@@ -6,4 +6,10 @@
     <color name="background">#00050D</color>
     <color name="prime_text">#1A98FF</color>
 
+    <color name="indicator_unselected_color">#33373D</color>
+
+    <color name="detail_button_color">#33373D</color>
+    <color name="details_extra_text">#B3B3B3</color>
+
+    <color name="bottom_sheet_background_color">#191E25</color>
 </resources>

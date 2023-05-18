@@ -5,8 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
+import com.w1nxclub.winxvideo.core.util.MockConstants.ACTION
+import com.w1nxclub.winxvideo.core.util.MockData.movies
+import com.w1nxclub.winxvideo.data.model.movie.Movie
+import com.w1nxclub.winxvideo.data.model.movie.MovieResult
 import com.w1nxclub.winxvideo.databinding.FragmentMovieBinding
 import com.w1nxclub.winxvideo.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,5 +23,8 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
     }
+
 }

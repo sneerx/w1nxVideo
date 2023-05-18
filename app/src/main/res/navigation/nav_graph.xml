@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_feedFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieFragment"
@@ -33,10 +39,20 @@
         tools:layout="@layout/fragment_movie" >
         <action
             android:id="@+id/action_movieFragment_to_feedFragment"
+            app:popUpTo="@id/feedFragment"
+            app:popUpToInclusive="true"
             app:destination="@id/feedFragment" />
         <action
             android:id="@+id/action_movieFragment_to_movieDetailFragment"
+            app:popUpTo="@id/movieFragment"
             app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_tvShowFragment"
+            app:popUpTo="@id/feedFragment"
+            app:destination="@id/tvShowFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
@@ -46,6 +62,16 @@
         <action
             android:id="@+id/action_movieDetailFragment_to_movieFragment"
             app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <argument
+            android:name="moviearg"
+            app:argType="com.w1nxclub.winxvideo.data.model.movie.Movie"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/tvShowFragment"
@@ -58,6 +84,12 @@
         <action
             android:id="@+id/action_tvShowFragment_to_tvShowDetailFragment"
             app:destination="@id/tvShowDetailFragment" />
+        <action
+            android:id="@+id/action_tvShowFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_tvShowFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/downloadsFragment"
@@ -76,6 +108,15 @@
         <action
             android:id="@+id/action_profileFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileBottomSheetFragment"
+            app:destination="@id/profileBottomSheetFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -130,6 +171,16 @@
         <action
             android:id="@+id/action_tvShowDetailFragment_to_tvShowFragment"
             app:destination="@id/tvShowFragment" />
+        <action
+            android:id="@+id/action_tvShowDetailFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <argument
+            android:name="tvshowarg"
+            app:argType="com.w1nxclub.winxvideo.data.model.tvshow.TvShow"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_tvShowDetailFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -159,4 +210,17 @@
             app:popUpToInclusive="true"
             app:destination="@id/feedFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/profileBottomSheetFragment"
+        android:name="com.w1nxclub.winxvideo.presentation.profile.ProfileBottomSheetFragment"
+        android:label="fragment_profile_bottom_sheet"
+        tools:layout="@layout/fragment_profile_bottom_sheet" >
+        <action
+            android:id="@+id/action_profileBottomSheetFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="media"
+            app:argType="com.w1nxclub.winxvideo.data.model.Media"
+            app:nullable="true" />
+    </dialog>
 </navigation>

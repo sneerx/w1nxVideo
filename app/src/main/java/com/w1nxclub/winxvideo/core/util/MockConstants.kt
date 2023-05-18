@@ -58,9 +58,12 @@ object MockConstants {
     const val UCUZ_ROMAN = 5
 
     // TvShow
-    const val GAME_OF_THRONES = 1
-    const val BREAKING_BAD = 2
-    const val LAST_OF_US = 3
-    const val HOUSE_OF_DRAGON = 4
-    const val LOST = 5
+    const val GAME_OF_THRONES = 100
+    const val BREAKING_BAD = 200
+    const val LAST_OF_US = 300
+    const val HOUSE_OF_DRAGON = 400
+    const val LOST = 500
+
+    const val MOVIE_TYPE = "movie"
+    const val TVSHOW_TYPE = "tvshow"
 }
