@@ -47,19 +47,8 @@ import com.w1nxclub.winxvideo.data.model.credits.Credits
 import com.w1nxclub.winxvideo.data.model.credits.Director
 import com.w1nxclub.winxvideo.data.model.genre.Genre
 import com.w1nxclub.winxvideo.data.model.movie.Movie
-import com.w1nxclub.winxvideo.data.model.movie.MovieResult
 import com.w1nxclub.winxvideo.data.model.tvshow.TvShow
-import com.w1nxclub.winxvideo.data.model.tvshow.TvShowResult
 
-object MockMovie {
-    val mockMovieResult = MovieResult(
-        MockData.movies
-    )
-
-    val mockTvResult = TvShowResult(
-        MockData.tvshow
-    )
-}
 object MockData {
 
     val movies = arrayListOf<Movie>(
