@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
-import com.w1nxclub.winxvideo.core.util.MockMovie
 import com.w1nxclub.winxvideo.core.util.carouselForMovie
+import com.w1nxclub.winxvideo.data.model.movie.MockMovie
 import com.w1nxclub.winxvideo.databinding.FragmentMovieBinding
 import dagger.hilt.android.AndroidEntryPoint
 

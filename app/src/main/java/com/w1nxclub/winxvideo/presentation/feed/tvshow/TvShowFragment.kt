@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.w1nxclub.winxvideo.R
 import com.w1nxclub.winxvideo.core.base.BaseFragment
-import com.w1nxclub.winxvideo.core.util.MockMovie
 import com.w1nxclub.winxvideo.core.util.carouselForTvShow
+import com.w1nxclub.winxvideo.data.model.tvshow.MockTvShow
 import com.w1nxclub.winxvideo.databinding.FragmentMovieBinding
 import com.w1nxclub.winxvideo.databinding.FragmentTvShowBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +29,7 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>(
     private fun setupCarousel() {
         binding.apply {
             mainCarouselView.carouselForTvShow(
-                tvShowResult = MockMovie.mockTvResult,
+                tvShowResult = MockTvShow.mockTvShowResult,
                 isAutoPlay = true,
                 layoutResource = R.layout.carousel_backdrop_image_item,
                 imgId = R.id.ivBackdropCarousel,
@@ -39,7 +39,7 @@ class TvShowFragment : BaseFragment<FragmentTvShowBinding>(
                 hideIndicator = false
             )
             carouselSuggestion.carouselForTvShow(
-                tvShowResult = MockMovie.mockTvResult,
+                tvShowResult = MockTvShow.mockTvShowResult,
                 isAutoPlay = false,
                 layoutResource = R.layout.carousel_poster_item,
                 imgId = R.id.ivPosterCarousel,

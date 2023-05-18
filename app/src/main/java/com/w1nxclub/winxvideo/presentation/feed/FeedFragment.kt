@@ -12,12 +12,12 @@ import com.w1nxclub.winxvideo.core.util.MockConstants.COMEDY
 import com.w1nxclub.winxvideo.core.util.MockConstants.CRIME
 import com.w1nxclub.winxvideo.core.util.MockData.movies
 import com.w1nxclub.winxvideo.core.util.MockData.tvshow
-import com.w1nxclub.winxvideo.core.util.MockMovie.mockMovieResult
-import com.w1nxclub.winxvideo.core.util.MockMovie.mockTvResult
 import com.w1nxclub.winxvideo.core.util.carouselForMovie
 import com.w1nxclub.winxvideo.core.util.carouselForTvShow
+import com.w1nxclub.winxvideo.data.model.movie.MockMovie.mockMovieResult
 import com.w1nxclub.winxvideo.data.model.movie.Movie
 import com.w1nxclub.winxvideo.data.model.movie.MovieResult
+import com.w1nxclub.winxvideo.data.model.tvshow.MockTvShow.mockTvShowResult
 import com.w1nxclub.winxvideo.data.model.tvshow.TvShow
 import com.w1nxclub.winxvideo.data.model.tvshow.TvShowResult
 import com.w1nxclub.winxvideo.databinding.FragmentFeedBinding
@@ -72,7 +72,7 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>(
             )
 
             carouselMostWatchedTv.carouselForTvShow(
-                tvShowResult = mockTvResult,
+                tvShowResult = mockTvShowResult,
                 isAutoPlay = false,
                 layoutResource = R.layout.carousel_poster_item,
                 imgId = R.id.ivPosterCarousel,
